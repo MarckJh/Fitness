@@ -1,3 +1,3 @@
 # Fitness
-Web project for school
-Find the easter egg too
+Web project for school,
+find the easter egg too
