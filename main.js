@@ -12,9 +12,7 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
         const modal = document.getElementById('modal');
         const modalBody = document.getElementById('modal-body');
         if (link.textContent.trim() === "About") {
-            modalBody.innerHTML = "<h2>About</h2><p>OYYYY MGA TORPEEEE GYM NA, ANONG KATAWAN YAN MUKANG bawal yan</p>";
-        } else if (link.textContent.trim() === "Socials") {
-            modalBody.innerHTML = "<h2>Socials</h2><p>Follow me on my Facebook</p>";
+            modalBody.innerHTML = "<h2>About</h2><p>On this website you can find your daily routines to work on your body and read some motivations to help you on the way.</p>"; 
         }
         modal.style.display = "flex";
     });
@@ -35,7 +33,7 @@ document.getElementById('home-link').addEventListener('click', function (e) {
     e.preventDefault();
     const modal = document.getElementById('modal');
     const modalBody = document.getElementById('modal-body');
-    modalBody.innerHTML = "<h2>Welcome Home!</h2><p>You are already on the Home page.</p>";
+    modalBody.innerHTML = "<h2>You're already Home!</h2>";
     modal.style.display = "flex";
 });
 
