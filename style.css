@@ -7,20 +7,20 @@
 }
 
 body {
-    background: linear-gradient(30deg, rgb(127, 225, 255), rgb(16, 0, 163));
+    background: #111;
     overflow-y: scroll;
 }
 
 .abs-bg {
-    background: linear-gradient(30deg, rgb(127, 225, 255), rgb(16, 0, 163));
+    background: #111;
 }
 
 .leg-bg {
-    background: linear-gradient(30deg, rgb(127, 225, 255), rgb(16, 0, 163));
+    background: #111;
 }
 
 .fullbody-bg {
-    background: linear-gradient(30deg, rgb(127, 225, 255), rgb(16, 0, 163));
+    background: #111;
 }
 
 body::after {
@@ -34,7 +34,9 @@ body::after {
 }
 
 main {
-    flex: 1;
+    min-height: 100vh;
+    background-image: url(images/fitness-img.jpg);
+    background-size: cover;
 }
 
 .hero {
@@ -51,13 +53,14 @@ main {
     display: inline-block;
     border-radius: 10px;
     margin: 10px 20px auto;
-    background: #a8fcf8a4;
-    color: #000000;
+    background: #8383837c;
+    color: #ffffff;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(34, 34, 59, 0.88);
+    box-shadow: 0 2px 8px rgba(34, 34, 59);
 }
 
 nav {
+    font-family: 'Roboto', 'Montserrat';
     background:  transparent;
     padding: 15px 20px;
 }
@@ -75,14 +78,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffffe5;
+    color: #f5f5f5;
+    margin: 0 15px;
     text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: color 0.3s, border-bottom 0.3s;
 }
 
 nav ul li a:hover {
-    color: #95c0ff;
+    color: #00ff88;
+    border-bottom: 2px solid #00ff88;
 }
 
 .modal {
@@ -93,19 +98,19 @@ nav ul li a:hover {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background: #fff1f1ec;
-    color: #22223b;
+    background: #000000;
+    color: #ffffff;
     padding: 30px 24px;
     border-radius: 12px;
     min-width: 260px;
     max-width: 90vw;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 4px 24px rgba(110, 110, 110, 0.18);
     position: relative;
     text-align: center;
 }
@@ -120,7 +125,7 @@ nav ul li a:hover {
 
 .logo {
     float: left;
-    color: rgb(0, 0, 0);
+    color: rgb(177, 177, 177);
     font-size: 25px;
     font-weight: bold;
 }
@@ -131,7 +136,28 @@ nav::after {
     clear: both;
 }
 
+.Heading-3 {
+    text-align: center;
+}
+
+.workouts-preview h3 {
+    color: #ffffff;
+    background: rgba(117, 117, 117, 0.329);
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+}
+
 .workouts-preview {
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
     margin: 20px auto;
     font-size: 20px;
     max-width: 600px;
@@ -141,18 +167,7 @@ nav::after {
     align-items: center;
 }
 
-.Heading-3 {
-    text-align: center;
-}
 
-.workouts-preview h3 {
-    color: #22223b;
-    background: rgb(172, 203, 207);
-    padding: 12px 20px;
-    display: inline-block;
-    border-radius: 10px;
-    margin: 0 auto 20px auto;
-}
 
 .workouts-preview ul {
     list-style: none;
@@ -167,7 +182,7 @@ nav::after {
 .workouts-preview li {
     margin: 10px 0;
     color: #f0f0f0;
-    background: rgba(182, 254, 255, 0.397);
+    background: rgba(49, 49, 49, 0.397);
     padding: 12px 20px;
     border-radius: 10px;
     display: inline-block;
@@ -188,7 +203,7 @@ nav::after {
 .workouts-preview a {
     display: inline-block;
     background: rgba(0, 0, 0, 0.3);
-    color: #22223b;
+    color: #ffffff;
     padding: 10px 10px;
     border-radius: 8px;
     margin: 8px 0;
@@ -197,12 +212,12 @@ nav::after {
 }
 
 .workouts-preview a:hover {
+    background: rgba(0, 0, 0, 0.8);
     color: #ffffffde;
-    background: #00000075;
 }
 
 ul li a {
-    color: #3593ffde;
+    color: #000000de;
     padding: 20px;
 }
 
@@ -214,10 +229,11 @@ nav,
 }
 
 .quote {
-    margin-top: auto;
-    padding: 20px 0;
+    background: #00000000;
+    color: #ffffff;
     text-align: center;
-    background: rgba(0, 0, 0, 0.3);
+    padding: 20px 12px;
+    margin-bottom: 5px;
 }
 
 .fade-out {
@@ -228,12 +244,6 @@ nav,
     to {
         opacity: 0;
     }
-}
-
-.hidden {
-    width: 10px;
-    opacity: 0.2;
-    user-select: none;
 }
 
 @media (max-width: 600px) {
